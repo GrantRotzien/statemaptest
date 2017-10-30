@@ -6,9 +6,61 @@
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/scripts.js"></script>
     <meta charset="utf-8">
-    <title>Template</title>
+    <title>state map</title>
   </head>
   <body>
+    <div class="container">
+      <h1>Pick your favorite state</h1>
+      <p>for some things you might not know</p>
+      <div id="map">
+        <img src="map.jpg" alt="click me" usemap="#Map" />
+        <map name="Map" id="Map">
+            <area id="oregon" title="" href="#" shape="poly"  coords="71,180,89,185,90,203,189,213,195,227,184,247,171,313,36,286,35,264" />
+            <area id="montana" title="" href="#" shape="poly" coords="225,145,314,159,380,166,425,169,418,270,293,261,290,273,283,267,257,271,249,259,243,237,239,241,227,231,236,216,229,206,218,190" />
+            <area id="whale" title="" href="#" shape="poly" coords="1045,538,1080,561,1070,592,1045,605,998,605,991,575,1012,540" />
+            <area id="mexico" title="" href="#" shape="poly" coords="116,558,166,564,239,610,299,617,304,604,337,609,367,641,376,671,406,690,423,669,448,677,466,702,483,727,494,757,539,775,528,809,552,873,264,874,131,632" />
+            <area id="california" title="" href="#" shape="poly" coords="34,290,110,310,95,379,181,500,175,561,116,555,56,492,21,331" />
+            <area id="colorado" title="" href="#" shape="poly" coords="320,367,443,379,443,476,308,474" />
+            <area id="washington" title="" href="#" shape="poly" coords="74,123,109,147,106,116,205,142,191,214,93,202,93,183,70,177" />
+            <area id="utah" title="" href="#" shape="poly" coords="228,328,279,333,278,361,310,366,300,472,202,456" />
+            <area id="texas" title="" href="#" shape="poly" coords="423,494,484,498,486,547,534,571,580,567,604,574,606,614,617,644,616,673,575,700,545,718,532,742,543,772,498,757,459,683,438,668,417,667,408,684,371,647,340,606,418,610" />
+        </map>
+      </div>
+      <div class="form">
+        <form id="userInput">
+          <div class="form-group">
+            <h3 id="stateOutput"></h3>
+          </div>
+          <div class="form-group">
+            <label for="travelDate">Travel Date: </label>
+            <input id="date" type="text" name="travelDate">
+          </div>
+          <div class="form-group">
+            <label for="activities">debauchery: </label>
+            <input id="debauchery" type="text" name="activities">
+          </div>
+          <div class="form-group">
+            <label for="notes">Some notes: </label>
+            <input id="notes" type="text" name="notes">
+          </div>
+          <button type="submit" name="button" class="btn btn-primary">submit</button>
+        </form>
+      </div>
+      <div id="state-info" class="info">
+        <div class="card">
+          <div class="card-header">
 
+          </div>
+          <div class="card-body">
+            <h4 id="finalState"></h4>
+            travel date: <span id="dateOutput"></span>
+            <br>
+            debauchery: <span id="debaucheryOutput"></span>
+            <br>
+            notes of trip: <span id="notesOutput"></span>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
